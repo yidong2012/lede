@@ -94,6 +94,16 @@ define Device/ezpro_mrkaio-m68s
 endef
 TARGET_DEVICES += ezpro_mrkaio-m68s
 
+define Device/easepi_r1
+$(call Device/rk3568)
+  DEVICE_VENDOR := EasePi
+  DEVICE_MODEL := R1
+  DEVICE_DTS := rk3568-easepi-r1
+  SUPPORTED_DEVICES += easepi,r1
+  DEVICE_PACKAGES := kmod-r8125 kmod-r8168 kmod-nvme kmod-thermal
+endef
+TARGET_DEVICES += easepi_r1
+
 define Device/ezpro_mrkaio-m68s-plus
   DEVICE_VENDOR := EZPRO
   DEVICE_MODEL := Mrkaio M68S PLUS
